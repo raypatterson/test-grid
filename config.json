@@ -53,8 +53,7 @@
         "source/**/*.html"
       ],
       "css": [
-        "source/**/*.scss",
-        "source/**/*.css"
+        "source/**/*.scss"
       ],
       "js": [
         "source/**/*.js"

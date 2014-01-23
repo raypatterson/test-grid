@@ -34,6 +34,14 @@
   background: $greenMint;
 }
 
+.turquoiseTeal {
+  background: $turquoiseTeal;
+}
+
+.turquoiseCrystal {
+  background: $turquoiseCrystal;
+}
+
 .greenSpa {
   background: $greenSpa;
 }
@@ -42,16 +50,8 @@
   background: $lime;
 }
 
-.lightblue {
-  background: lightblue;
-}
-
-.skyblue {
-  background: skyblue;
-}
-
-.orange {
-  background: orange;
+.grayBattleship {
+  background: $grayBattleship;
 }
 
 .layers {
@@ -72,6 +72,8 @@
 
 .block {
 
+  color: #FFF;
+  text-shadow: 0px 1px 1px #4c4c4c;
   box-sizing: border-box;
   border: solid white 1px;
   padding: 0.5em;

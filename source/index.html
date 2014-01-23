@@ -17,7 +17,7 @@
       <% _.forEach(stack.layers, function(layer) { %>
         <div class="blocks pure-g-r">
           <% _.forEach(layer, function(block) { %>
-            <div class="block pure-u-<%= block.grid %>"><%= block.name %></div>
+            <div class="<%= block.color %> block pure-u-<%= block.grid %>"><%= block.name %></div>
           <% }); %>
         </div>
       <% }); %>

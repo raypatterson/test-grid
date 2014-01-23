@@ -56,6 +56,7 @@ var source_scss = config.path.source.scss;
 var source_css = config.path.source.css;
 var source_js = config.path.source.js;
 
+var watch_data = config.path.watch_data;
 var watch_html = config.path.watch.html;
 var watch_scss = config.path.watch.scss;
 var watch_css = config.path.watch.css;
@@ -152,9 +153,11 @@ gulp.task('default', function() {
   gulp.watch(watch_html, function() {
     gulp.run('html');
   });
+
   gulp.watch(watch_css, function() {
     gulp.run('css');
   });
+
   gulp.watch(watch_js, function() {
     gulp.run('js');
   });
