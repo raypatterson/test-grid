@@ -1,0 +1,41 @@
+{
+  "author": "Ray Patterson",
+  "name": "Technology Stack Diagram",
+  "version": "0.0.0",
+  "homepage": "http://raypatterson.github.io/doc-tech-stack",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.github.com/raypatterson/doc-tech-stack/master/LICENSE"
+  },
+  "bugs": "https://github.com/raypatterson/doc-tech-stack/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:raypatterson/doc-tech-stack.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.4.0",
+    "gulp-util": "~2.2.12",
+    "gulp-livereload": "~0.2.0",
+    "gulp-if": "0.0.3",
+    "gulp-open": "~0.2.7",
+    "gulp-size": "~0.1.1",
+    "gulp-template": "~0.1.1",
+    "gulp-minify-html": "~0.1.0",
+    "gulp-myth": "~0.1.0",
+    "gulp-csso": "~0.1.7",
+    "gulp-jshint": "~1.3.4",
+    "gulp-uglify": "~0.1.0",
+    "gulp-sass": "~0.4.0",
+    "gulp-autoprefixer": "0.0.4",
+    "gulp-bytediff": "~0.1.7",
+    "gulp-rev": "~0.2.0",
+    "gulp-gzip": "0.0.4",
+    "rework": "~0.20.2",
+    "rework-importer": "~0.2.2",
+    "connect": "~2.12.0",
+    "connect-livereload": "~0.3.2",
+    "tiny-lr": "0.0.5",
+    "vinyl-map": "0.0.1"
+  }
+}

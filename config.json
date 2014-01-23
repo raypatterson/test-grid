@@ -1,0 +1,68 @@
+{
+  "options": {
+    "livereload": {
+      "port": 35729
+    },
+    "autoprefixer": {
+      "browers": [
+        "> 1%",
+        "last 10 versions",
+        "Firefox ESR",
+        "Opera 12.1",
+        "Android 4",
+        "Explorer 8"
+      ]
+    }
+  },
+  "env": {
+    "localhost": {
+      "url": {
+        "protocol": "http",
+        "domain": "localhost",
+        "path": null,
+        "port": 8888
+      }
+    },
+    "development": {
+      "url": {
+        "protocol": "https",
+        "domain": "raypatterson.github.io",
+        "path": "doc-tech-stack",
+        "port": null
+      }
+    },
+    "production": {
+      "url": {
+        "protocol": "https",
+        "domain": "raypatterson.github.io",
+        "path": "doc-tech-stack",
+        "port": null
+      }
+    }
+  },
+  "path": {
+    "base": ".",
+    "source": {
+      "base": "source/",
+      "html": "source/index.html",
+      "css": "source/main.scss",
+      "js": "source/main.js"
+    },
+    "watch": {
+      "html": [
+        "source/**/*.html"
+      ],
+      "css": [
+        "source/**/*.scss",
+        "source/**/*.css"
+      ],
+      "js": [
+        "source/**/*.js"
+      ]
+    },
+    "build": {
+      "dev": "build/dev",
+      "dist": "build/dist"
+    }
+  }
+}

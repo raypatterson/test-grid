@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="main.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body>
+
+    <h1>
+      <%= stack.name %>
+    </h1>
+    <h2>
+      <%= stack.desc %>
+    </h2>
+
+    <div class="layers">
+      <% _.forEach(stack.layers, function(layer) { %>
+        <div class="blocks pure-g-r">
+          <% _.forEach(layer, function(block) { %>
+            <div class="block pure-u-<%= block.grid %>"><%= block.name %></div>
+          <% }); %>
+        </div>
+      <% }); %>
+    </div>
+
+    <script src="main.js" type="application/javascript"></script>
+  </body>
+</html>

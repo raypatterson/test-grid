@@ -1,0 +1,9 @@
+{
+  "name": "build-system",
+  "version": "0.3.1",
+  "devDependencies": {
+    "jquery-legacy": "jquery#1.10",
+    "jquery-modern": "jquery#2",
+    "pure": "~0.3.0"
+  }
+}

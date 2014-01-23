@@ -1,0 +1,73 @@
+{
+  "stack": {
+    "name": "Stack Name",
+    "desc": "Stack Description",
+    "layers": [
+      [
+        {
+          "name": "Custom CSS",
+          "grid": "1-3"
+        },
+        {
+          "name": "Custom JavaScript",
+          "grid": "2-3"
+        }
+      ],
+
+      [
+        {
+          "name": "Bootstrap",
+          "grid": "1-3"
+        },
+        {
+          "name": "Backbone Plugins",
+          "grid": "1-3"
+        },
+        {
+          "name": "Marionette",
+          "grid": "1-3"
+        }
+      ],
+
+      [
+        {
+          "name": "jQuery Plugins",
+          "grid": "1-3"
+        },
+        {
+          "name": "Backbone",
+          "grid": "2-3"
+        }
+      ],
+
+      [
+        {
+          "name": "jQuery",
+          "grid": "1-3"
+        },
+        {
+          "name": "Lo-Dash",
+          "grid": "1-3"
+        },
+        {
+          "name": "Handlebars",
+          "grid": "1-3"
+        }
+      ],
+
+      [
+        {
+          "name": "HTML5",
+          "grid": "1"
+        }
+      ],
+
+      [
+        {
+          "name": "Browser",
+          "grid": "1"
+        }
+      ]
+    ]
+  }
+}
