@@ -85,7 +85,7 @@ var build_dir = (production !== true) ? config.path.build.dev : config.path.buil
       }
     }
   });
-  console.log('lines', lines);
+  // console.log('lines', lines);
   var stream = fs.createWriteStream(source_base + '/_color-list.scss');
   stream.once('open', function(fd) {
     stream.write('$color-list:\r' + lines.join(',\r') + '\r;');
