@@ -40,29 +40,58 @@ var lh_url = lh_vars.url.protocol + '://' + lh_vars.url.domain + ':' + lh_port +
 
 /* Path */
 
-var bower_dir = fs.readFile('./.bowerrc', 'utf8', function(err, data) {
+var bower_dir = fs.readFile('./.bowerrc', 'utf8', function(err, file) {
   if (err) {
     gutil.log('Error Reading Bower : ' + err);
     return 'bower_components';
   }
-  return JSON.parse(data).directory;
+  return JSON.parse(file).directory;
 });
 
 var base = config.path.base;
 
 var source_base = config.path.source.base;
 var source_html = config.path.source.html;
-var source_scss = config.path.source.scss;
 var source_css = config.path.source.css;
 var source_js = config.path.source.js;
 
-var watch_data = config.path.watch_data;
+var watch_json = config.path.watch.json;
 var watch_html = config.path.watch.html;
-var watch_scss = config.path.watch.scss;
 var watch_css = config.path.watch.css;
 var watch_js = config.path.watch.js;
 
 var build_dir = (production !== true) ? config.path.build.dev : config.path.build.dist;
+
+/* Utils */
+
+(function() {
+  var src = source_base + '/colors/';
+  var arr;
+  var i;
+  var line;
+  var lines = [];
+  fs.readdirSync(src).forEach(function(file) {
+    arr = fs.readFileSync(src + file).toString().split("\n");
+    for (i in arr) {
+      line = arr[i];
+      if (line.charAt(0) === '$') {
+        line = line
+          .replace(/\s/g, '')
+          .replace(/\$/g, '"')
+          .replace(/\!default/g, '')
+          .replace(/:/g, '"\t')
+          .replace(/;/g, '');
+        lines.push(line);
+      }
+    }
+  });
+  console.log('lines', lines);
+  var stream = fs.createWriteStream(source_base + '/_color-list.scss');
+  stream.once('open', function(fd) {
+    stream.write('$color-list:\r' + lines.join(',\r') + '\r;');
+    stream.end();
+  });
+}());
 
 /* Task */
 
@@ -149,6 +178,13 @@ gulp.task('open_browser', function() {
 gulp.task('default', function() {
   gulp.run('html', 'css', 'js', 'lr_server', 'server');
   // gulp.run('open_browser');
+
+  gulp.watch(watch_json, function() {
+    fs.readFile('./data.json', 'utf8', function(err, file) {
+      data = JSON.parse(file);
+      gulp.run('html');
+    });
+  });
 
   gulp.watch(watch_html, function() {
     gulp.run('html');

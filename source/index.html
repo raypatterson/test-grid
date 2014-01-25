@@ -6,18 +6,20 @@
   </head>
   <body>
 
-    <h1>
-      <%= stack.name %>
-    </h1>
-    <h2>
-      <%= stack.desc %>
-    </h2>
+    <header>
+      <h1 class="name">
+        <%= stack.name %>
+      </h1>
+      <h2 class="desc">
+        <%= stack.desc %>
+      </h2>
+    </header>
 
     <div class="layers">
       <% _.forEach(stack.layers, function(layer) { %>
         <div class="blocks pure-g-r">
           <% _.forEach(layer, function(block) { %>
-            <div class="<%= block.color %> block pure-u-<%= block.grid %>"><%= block.name %></div>
+            <div class="background-<%= block.color %> block pure-u-<%= block.grid %>"><%= block.name %></div>
           <% }); %>
         </div>
       <% }); %>

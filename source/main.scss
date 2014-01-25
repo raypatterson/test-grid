@@ -6,6 +6,7 @@
 ******************/
 
 @import 'color-me-sass';
+@import 'color-list';
 @import 'variables';
 
 /******************
@@ -22,36 +23,24 @@
 *
 ******************/
 
-.greenBright {
-  background: $greenBright;
+@each $item in $color-list {
+
+  $key: nth($item, 1);
+  $val: nth($item, 2);
+
+  .color-#{$key} {
+    color: $val;
+  }
+
+  .background-#{$key} {
+    background-color: $val;
+  }
 }
 
-.green {
-  background: $green;
-}
-
-.greenMint {
-  background: $greenMint;
-}
-
-.turquoiseTeal {
-  background: $turquoiseTeal;
-}
-
-.turquoiseCrystal {
-  background: $turquoiseCrystal;
-}
-
-.greenSpa {
-  background: $greenSpa;
-}
-
-.lime {
-  background: $lime;
-}
-
-.grayBattleship {
-  background: $grayBattleship;
+header {
+  .name, .desc {
+    text-align: center;
+  }
 }
 
 .layers {
@@ -73,7 +62,7 @@
 .block {
 
   color: #FFF;
-  text-shadow: 0px 1px 1px #4c4c4c;
+  text-shadow: 0px 0px 2px #4c4c4c;
   box-sizing: border-box;
   border: solid white 1px;
   padding: 0.5em;

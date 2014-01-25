@@ -43,12 +43,16 @@
   "path": {
     "base": ".",
     "source": {
-      "base": "source/",
+      "base": "source",
+      "json": "source",
       "html": "source/index.html",
       "css": "source/main.scss",
       "js": "source/main.js"
     },
     "watch": {
+      "json": [
+        "./**/*.json"
+      ],
       "html": [
         "source/**/*.html"
       ],
