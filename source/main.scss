@@ -5,9 +5,9 @@
 *
 ******************/
 
-@import 'color-me-sass';
-@import 'color-list';
-@import 'variables';
+@import 'vendor/color-me-sass/color-me-sass';
+@import 'library/styles/color-list';
+@import 'project/styles/variables';
 
 /******************
 *
@@ -15,7 +15,7 @@
 *
 ******************/
 
-@import url('../bower_components/pure/pure.css');
+@import url('bower_components/pure/pure.css');
 
 /******************
 *

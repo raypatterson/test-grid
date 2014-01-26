@@ -56,34 +56,34 @@ function getMainJSON() {
   return JSON.parse(fs.readFileSync(config.path.source.json));
 }
 
-(function() {
-  var src = source_base + '/colors/';
-  var arr;
-  var i;
-  var line;
-  var lines = [];
-  fs.readdirSync(src).forEach(function(file) {
-    arr = fs.readFileSync(src + file).toString().split("\n");
-    for (i in arr) {
-      line = arr[i];
-      if (line.charAt(0) === '$') {
-        line = line
-          .replace(/\s/g, '')
-          .replace(/\$/g, '"')
-          .replace(/\!default/g, '')
-          .replace(/:/g, '"\t')
-          .replace(/;/g, '');
-        lines.push(line);
-      }
-    }
-  });
-  // console.log('lines', lines);
-  var stream = fs.createWriteStream(source_base + '/_color-list.scss');
-  stream.once('open', function(fd) {
-    stream.write('$color-list:\r' + lines.join(',\r') + '\r;');
-    stream.end();
-  });
-}());
+// (function() {
+//   var src = source_base + '/colors/';
+//   var arr;
+//   var i;
+//   var line;
+//   var lines = [];
+//   fs.readdirSync(src).forEach(function(file) {
+//     arr = fs.readFileSync(src + file).toString().split("\n");
+//     for (i in arr) {
+//       line = arr[i];
+//       if (line.charAt(0) === '$') {
+//         line = line
+//           .replace(/\s/g, '')
+//           .replace(/\$/g, '"')
+//           .replace(/\!default/g, '')
+//           .replace(/:/g, '"\t')
+//           .replace(/;/g, '');
+//         lines.push(line);
+//       }
+//     }
+//   });
+//   // console.log('lines', lines);
+//   var stream = fs.createWriteStream(source_base + '/_color-list.scss');
+//   stream.once('open', function(fd) {
+//     stream.write('$color-list:\r' + lines.join(',\r') + '\r;');
+//     stream.end();
+//   });
+// }());
 
 /* Task */
 
@@ -125,7 +125,7 @@ gulp.task('css', function() {
 
   var css_import = vinyl_map(function(contents, filename) {
     return rework(contents.toString()).use(rework_importer({
-      path: source_base
+      path: base
     })).toString();
   });
 
@@ -214,34 +214,6 @@ gulp.task('default', function() {
 
 //   return stream
 //     .pipe(production_stream(stream, minify_css(), true))
-//     .pipe(gulp.dest(build_dir))
-//     .pipe(refresh(lr_server));
-// });
-
-
-// gulp.watch(watch_css, function() {
-//   gulp.run('css');
-// });
-
-// gulp.task('css', function() {
-
-//   var test_rework_import = vinyl_map(function(contents, filename) {
-//     return rework(contents.toString()).use(rework_importer({
-//       path: source_base
-//     })).toString();
-//   });
-
-//   return gulp.src(source_css)
-//     .pipe(test_rework_import)
-//     .pipe(myth())
-//     .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers))
-//     .pipe(size({
-//       showFiles: true
-//     }))
-//     .pipe(gulpif(production, minify_css()))
-//     .pipe(gulpif(production, size({
-//       showFiles: true
-//     })))
 //     .pipe(gulp.dest(build_dir))
 //     .pipe(refresh(lr_server));
 // });
