@@ -1,0 +1,136 @@
+{
+  "name": "[Client] [Project] Technology Stack",
+  "desc": "The following diagram illustrates at a high level, <br>the component layers for the project technologies",
+  "layers": [
+    [
+      {
+        "name": "Custom CSSX",
+        "grid": "1-3",
+        "color": "greenDull"
+      },
+      {
+        "name": "Custom JavaScript",
+        "grid": "2-3",
+        "color": "greenDull"
+      }
+    ],
+
+    [
+      {
+        "name": "Bootstrap",
+        "grid": "1-3",
+        "color": "green"
+      },
+      {
+        "name": "Backbone Plugins",
+        "grid": "1-3",
+        "color": "green"
+      },
+      {
+        "name": "Marionette",
+        "grid": "1-3",
+        "color": "green"
+      }
+    ],
+
+    [
+      {
+        "name": "jQuery Plugins",
+        "grid": "2-5",
+        "color": "greenMint"
+      },
+      {
+        "name": "Backbone",
+        "grid": "3-5",
+        "color": "greenMint"
+      }
+    ],
+
+    [
+      {
+        "name": "jQuery",
+        "grid": "1-2",
+        "color": "turquoiseCrystal"
+      },
+      {
+        "name": "Lo-Dash",
+        "grid": "1-4",
+        "color": "turquoiseCrystal"
+      },
+      {
+        "name": "Handlebars",
+        "grid": "1-4",
+        "color": "turquoiseCrystal"
+      }
+    ],
+
+    [
+      {
+        "name": "HTML5",
+        "grid": "1",
+        "color": "turquoiseTeal"
+      }
+    ],
+
+    [
+      {
+        "name": "Browser",
+        "grid": "1",
+        "color": "graySlate"
+      }
+    ],
+
+    [
+      {
+        "name": "HTTPS REST",
+        "grid": "1-2",
+        "color": "blueSea"
+      },
+      {
+        "name": "Socket.io",
+        "grid": "1-2",
+        "color": "blueSea"
+      }
+    ],
+
+    [
+      {
+        "name": "Sails MVC",
+        "grid": "1",
+        "color": "blueZurb"
+      }
+    ],
+
+    [
+      {
+        "name": "Express Application",
+        "grid": "1",
+        "color": "brownMocha"
+      }
+    ],
+
+    [
+      {
+        "name": "Node Server",
+        "grid": "1",
+        "color": "greenKickstarter"
+      }
+    ],
+
+    [
+      {
+        "name": "SSL",
+        "grid": "1",
+        "color": "yellowAboutme"
+      }
+    ],
+
+    [
+      {
+        "name": "MongoDB",
+        "grid": "1",
+        "color": "amberDark"
+      }
+    ]
+  ]
+}

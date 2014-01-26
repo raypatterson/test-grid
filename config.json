@@ -12,6 +12,13 @@
         "Android 4",
         "Explorer 8"
       ]
+    },
+    "swig": {
+      "defaults": {
+        "autoescape": false
+      },
+      "load_json": true,
+      "ext": ".html"
     }
   },
   "env": {
@@ -44,14 +51,18 @@
     "base": ".",
     "source": {
       "base": "source",
-      "json": "source",
-      "html": "source/index.html",
+      "index": "source/index.html",
+      "swig": "source/**/*.swig",
+      "html": "source/**/*.html",
+      "json": "source/main.json",
       "css": "source/main.scss",
       "js": "source/main.js"
     },
+    "filter": {},
     "watch": {
-      "json": [
-        "./**/*.json"
+      "swig": [
+        "source/**/*.swig",
+        "source/**/*.json"
       ],
       "html": [
         "source/**/*.html"

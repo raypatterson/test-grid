@@ -1,6 +1,7 @@
 {
-  "author": "Ray Patterson",
-  "name": "Technology Stack Diagram",
+  "author": "RayPatterson",
+  "name": "doc-tech-stack",
+  "description": "Technology Stack Diagram",
   "version": "0.0.0",
   "homepage": "http://raypatterson.github.io/doc-tech-stack",
   "licenses": {
@@ -18,9 +19,12 @@
     "gulp-util": "~2.2.12",
     "gulp-livereload": "~0.2.0",
     "gulp-if": "0.0.3",
+    "gulp-filter": "~0.2.1",
+    "gulp-ignore": "~1.0.0",
     "gulp-open": "~0.2.7",
     "gulp-size": "~0.1.1",
     "gulp-template": "~0.1.1",
+    "gulp-swig": "~0.2.0",
     "gulp-minify-html": "~0.1.0",
     "gulp-myth": "~0.1.0",
     "gulp-csso": "~0.1.7",

@@ -1,12 +1,14 @@
 var package = require('./package');
 var config = require('./config');
-var data = require('./data');
 
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var filter = require('gulp-filter');
+var ignore = require('gulp-ignore');
 var bytediff = require('gulp-bytediff');
+var swig = require('gulp-swig');
 var template = require('gulp-template');
 var rev = require('gulp-rev');
 var gzip = require('gulp-gzip');
@@ -36,33 +38,23 @@ var lr_port = config.options.livereload.port;
 var lr_server = require('tiny-lr')();
 var lh_vars = config.env.localhost;
 var lh_port = lh_vars.url.port;
-var lh_url = lh_vars.url.protocol + '://' + lh_vars.url.domain + ':' + lh_port + '/';
+var lh_url = lh_vars.url.protocol + '://' + lh_vars.url.domain + (lh_port ? (':' + lh_port) : '/');
 
 /* Path */
 
-var bower_dir = fs.readFile('./.bowerrc', 'utf8', function(err, file) {
-  if (err) {
-    gutil.log('Error Reading Bower : ' + err);
-    return 'bower_components';
-  }
-  return JSON.parse(file).directory;
-});
+var bower_dir = JSON.parse(fs.readFileSync('./.bowerrc')).directory;
 
 var base = config.path.base;
 
 var source_base = config.path.source.base;
-var source_html = config.path.source.html;
-var source_css = config.path.source.css;
-var source_js = config.path.source.js;
-
-var watch_json = config.path.watch.json;
-var watch_html = config.path.watch.html;
-var watch_css = config.path.watch.css;
-var watch_js = config.path.watch.js;
 
 var build_dir = (production !== true) ? config.path.build.dev : config.path.build.dist;
 
 /* Utils */
+
+function getMainJSON() {
+  return JSON.parse(fs.readFileSync(config.path.source.json));
+}
 
 (function() {
   var src = source_base + '/colors/';
@@ -104,13 +96,24 @@ var production_stream = function(stream, minify, rev_file) {
     .pipe(gulpif(production, gzip()));
 };
 
+gulp.task('swig', function() {
+
+  var swig_opts = config.options.swig;
+
+  swig_opts.defaults.locals = getMainJSON().swig.locals;
+
+  var stream = gulp.src(config.path.source.swig)
+    .pipe(swig(swig_opts));
+
+  return stream
+    .pipe(production_stream(stream, minify_html()))
+    .pipe(gulp.dest(build_dir))
+    .pipe(refresh(lr_server));
+});
+
 gulp.task('html', function() {
 
-  var stream = gulp.src(source_html)
-    .pipe(template({
-      title: package.name,
-      stack: data.stack
-    }));
+  var stream = gulp.src(config.path.source.html);
 
   return stream
     .pipe(production_stream(stream, minify_html()))
@@ -126,7 +129,7 @@ gulp.task('css', function() {
     })).toString();
   });
 
-  var stream = gulp.src(source_css)
+  var stream = gulp.src(config.path.source.css)
     .pipe(sass({
       errLogToConsole: true,
       includePaths: [source_base, bower_dir]
@@ -143,7 +146,7 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
 
-  var stream = gulp.src(source_js)
+  var stream = gulp.src(config.path.source.js)
     .pipe(jshint())
     .pipe(jshint.reporter());
 
@@ -169,32 +172,32 @@ gulp.task('server', function() {
 });
 
 gulp.task('open_browser', function() {
-  return gulp.src(source_html)
+  return gulp.src(config.path.source.index)
     .pipe(open_browser('', {
       url: lh_url
     }));
 });
 
 gulp.task('default', function() {
-  gulp.run('html', 'css', 'js', 'lr_server', 'server');
-  // gulp.run('open_browser');
 
-  gulp.watch(watch_json, function() {
-    fs.readFile('./data.json', 'utf8', function(err, file) {
-      data = JSON.parse(file);
-      gulp.run('html');
-    });
+  gulp.run('swig', 'html', 'css', 'js', 'lr_server', 'server');
+  gulp.run('open_browser');
+
+  var watch = config.path.watch;
+
+  gulp.watch(watch.swig, function() {
+    gulp.run('swig');
   });
 
-  gulp.watch(watch_html, function() {
+  gulp.watch(watch.html, function() {
     gulp.run('html');
   });
 
-  gulp.watch(watch_css, function() {
+  gulp.watch(watch.css, function() {
     gulp.run('css');
   });
 
-  gulp.watch(watch_js, function() {
+  gulp.watch(watch.js, function() {
     gulp.run('js');
   });
 });
