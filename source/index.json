@@ -4,7 +4,7 @@
   "layers": [
     [
       {
-        "name": "Custom CSSX",
+        "name": "Custom CSS",
         "grid": "1-3",
         "color": "greenDull"
       },

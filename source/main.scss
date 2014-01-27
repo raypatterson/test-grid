@@ -5,17 +5,10 @@
 *
 ******************/
 
-@import 'vendor/color-me-sass/color-me-sass';
-@import 'library/styles/color-list';
-@import 'project/styles/variables';
-
-/******************
-*
-* CSS Imports
-*
-******************/
-
-@import url('bower_components/pure/pure.css');
+@import 'assets/vendor/color-me-sass/color-me-sass';
+@import 'assets/library/styles/color-list';
+@import 'assets/project/styles/variables';
+@import 'bower_components/pure/pure.css';
 
 /******************
 *
