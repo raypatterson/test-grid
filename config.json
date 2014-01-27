@@ -49,6 +49,7 @@
   },
   "path": {
     "base": ".",
+    "temp": ".tmp",
     "source": {
       "base": "source",
       "index": "source/index.html",

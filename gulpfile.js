@@ -2,9 +2,12 @@ var package = require('./package');
 var config = require('./config');
 
 var fs = require('fs');
+var map_stream = require('map-stream');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var clean = require('gulp-clean');
+var rimraf = require('gulp-rimraf');
 var filter = require('gulp-filter');
 var ignore = require('gulp-ignore');
 var bytediff = require('gulp-bytediff');
@@ -13,6 +16,7 @@ var template = require('gulp-template');
 var rev = require('gulp-rev');
 var gzip = require('gulp-gzip');
 var minify_html = require('gulp-minify-html');
+var compass = require('gulp-compass');
 var sass = require('gulp-sass');
 var myth = require('gulp-myth');
 var autoprefixer = require('gulp-autoprefixer');
@@ -121,7 +125,30 @@ gulp.task('html', function() {
     .pipe(refresh(lr_server));
 });
 
+gulp.task('compass', function() {
+
+  var temp = config.path.temp;
+
+  return gulp.src(config.path.source.css)
+    .pipe(compass({
+      project: base,
+      css: temp,
+      sass: source_base,
+      additional_import_paths: [source_base, bower_dir]
+    }))
+    .pipe(vinyl_map(function(contents, filename) {
+      gulp.src(temp, {
+        read: false
+      })
+        .pipe(clean());
+    }))
+    .pipe(gulp.dest(build_dir))
+    .pipe(refresh(lr_server));
+});
+
 gulp.task('css', function() {
+
+  var temp = config.path.temp;
 
   var css_import = vinyl_map(function(contents, filename) {
     return rework(contents.toString()).use(rework_importer({
@@ -130,11 +157,23 @@ gulp.task('css', function() {
   });
 
   var stream = gulp.src(config.path.source.css)
-    .pipe(sass({
-      errLogToConsole: true,
-      includePaths: [source_base, bower_dir]
+    .pipe(compass({
+      project: base,
+      css: temp,
+      sass: source_base,
+      additional_import_paths: [source_base, bower_dir]
     }))
-    .pipe(css_import)
+    .pipe(vinyl_map(function(contents, filename) {
+      gulp.src(temp, {
+        read: false
+      })
+        .pipe(clean());
+    }))
+  // .pipe(sass({
+  //   errLogToConsole: true,
+  //   includePaths: [source_base, bower_dir]
+  // }))
+  .pipe(css_import)
     .pipe(myth())
     .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers));
 
@@ -181,7 +220,7 @@ gulp.task('open_browser', function() {
 gulp.task('default', function() {
 
   gulp.run('swig', 'html', 'css', 'js', 'lr_server', 'server');
-  gulp.run('open_browser');
+  // gulp.run('open_browser');
 
   var watch = config.path.watch;
 
@@ -201,19 +240,3 @@ gulp.task('default', function() {
     gulp.run('js');
   });
 });
-
-// gulp.task('compass', function() {
-
-//   var stream = gulp.src(source_scss)
-//     .pipe(compass({
-//       project: base,
-//       css: build_dir,
-//       sass: source_base
-//     }))
-//     .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers));
-
-//   return stream
-//     .pipe(production_stream(stream, minify_css(), true))
-//     .pipe(gulp.dest(build_dir))
-//     .pipe(refresh(lr_server));
-// });
