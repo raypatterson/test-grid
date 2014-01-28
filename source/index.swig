@@ -18,7 +18,11 @@
       {% for layer in layers %}
         <div class="blocks pure-g-r">
           {% for block in layer %}
-            <div class="background-{{ block.color }} block pure-u-{{ block.grid }}">{{ block.name }}</div>
+            <div class="block pointer pure-u-{{ block.grid }}">
+              <div class="block-background background-{{ block.color }}"></div>
+              <div class="block-hover background-white"></div>
+              <div class="block-name">{{ block.name }}</div>
+            </div>
           {% endfor %}
         </div>
       {% endfor %}
