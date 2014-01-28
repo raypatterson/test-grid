@@ -33,7 +33,9 @@
 }
 
 body {
-  background: $whiteSmoke;
+  background: $grayCharcoal;
+  color: $grayCharcoal * 0.25;
+  text-shadow: 0px 1px 1px ($grayCharcoal * 1.5);
 }
 
 header {
