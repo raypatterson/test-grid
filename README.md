@@ -1,4 +1,4 @@
-Testign Pure CSS Grid
+Testing Pure CSS Grid
 =====================
 
 Technology Stack Diagram
