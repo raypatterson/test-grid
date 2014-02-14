@@ -10,10 +10,10 @@ echo '. . . Installing'
 echo '.'
 echo '.'
 echo '.'
-npm install -g --loglevel silent gulp bower
-npm install --save-dev --loglevel silent gulp gulp-util
-npm install --loglevel silent
-bower install --silent
+npm i -s -g gulp bower
+npm i -s -D gulp gulp-util
+npm i -s
+bower i -s
 echo '.'
 echo '.'
 echo '.'
