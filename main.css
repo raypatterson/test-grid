@@ -1,0 +1,6692 @@
+/******************
+*
+* SASS Imports
+*
+******************/
+
+/*!
+ *
+ * Color Me SASS v1.0
+ * Built and Designed by Richard Bray
+ *
+ */
+
+/*!
+Pure v0.3.0
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+
+/*!
+normalize.css v1.1.2 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+p,
+pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"],
+/* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.pure-button {
+  /* Structure */
+  display: inline-block;
+  *display: inline;
+  /*IE 6/7*/
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+
+.pure-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*csslint unqualified-attributes:false, outline-none:false*/
+
+.pure-button {
+  font-size: 100%;
+  *font-size: 90%;
+  /*IE 6/7 - To reduce IE's oversized button text*/
+  *overflow: visible;
+  /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+  padding: 0.5em 1.5em 0.5em;
+  color: #444;
+  /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.80);
+  /* rgba supported */
+  *color: #444;
+  /* IE 6 & 7 */
+  border: 1px solid #999;
+  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);
+  /*IE9 + everything else*/
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  /* Transitions */
+  -webkit-transition: 0.1s linear -webkit-box-shadow;
+  transition: 0.1s linear box-shadow;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0,0,0,0)', endColorstr='#1a000000',GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+
+.pure-button:focus {
+  outline: 0;
+}
+
+.pure-button-active,
+.pure-button:active {
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.pure-button-hidden {
+  display: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+
+.pure-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+  background-color: rgb(0, 120, 231);
+  color: #fff;
+}
+
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  -webkit-box-shadow: inset 0 1px 3px #ddd;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  -webkit-transition: 0.3s linear border;
+  transition: 0.3s linear border;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #129FEA;
+}
+
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 1px auto #129FEA;
+}
+
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+  margin: 0.5em 0;
+  display: block;
+}
+
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
+  cursor: not-allowed;
+  background-color: #eaeded;
+  color: #cad2d3;
+}
+
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+  background: #eee;
+  /* menu hover bg color */
+  color: #777;
+  /* menu text color */
+  border-color: #ccc;
+}
+
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
+  color: #b94a48;
+  border: 1px solid #ee5f5b;
+}
+
+.pure-form input:focus:invalid:focus,
+.pure-form textarea:focus:invalid:focus,
+.pure-form select:focus:invalid:focus {
+  border-color: #e9322d;
+}
+
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+  outline-color: #e9322d;
+}
+
+.pure-form select {
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.pure-form select[multiple] {
+  height: auto;
+}
+
+.pure-form label {
+  margin: 0.5em 0 0.2em;
+  font-size: 90%;
+}
+
+.pure-form fieldset {
+  margin: 0;
+  padding: 0.35em 0 0.75em;
+  border: 0;
+}
+
+.pure-form legend {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  margin-bottom: 0.3em;
+  font-size: 125%;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+  display: block;
+  margin: 0.25em 0;
+}
+
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+
+/* Aligned Forms */
+
+.pure-form-aligned .pure-control-group {
+  margin-bottom: 0.5em;
+}
+
+.pure-form-aligned .pure-control-group label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+}
+
+.pure-form-aligned .pure-controls {
+  margin: 1.5em 0 0 10em;
+}
+
+/* Rounded Inputs */
+
+.pure-form input.pure-input-rounded,
+.pure-form .pure-input-rounded {
+  border-radius: 2em;
+  padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+
+.pure-form .pure-group fieldset {
+  margin-bottom: 10px;
+}
+
+.pure-form .pure-group input {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  border-radius: 0;
+  position: relative;
+  top: -1px;
+}
+
+.pure-form .pure-group input:focus {
+  z-index: 2;
+}
+
+.pure-form .pure-group input:first-child {
+  top: 1px;
+  border-radius: 4px 4px 0 0;
+}
+
+.pure-form .pure-group input:last-child {
+  top: -2px;
+  border-radius: 0 0 4px 4px;
+}
+
+.pure-form .pure-group button {
+  margin: 0.35em 0;
+}
+
+.pure-form .pure-input-1 {
+  width: 100%;
+}
+
+.pure-form .pure-input-2-3 {
+  width: 66%;
+}
+
+.pure-form .pure-input-1-2 {
+  width: 50%;
+}
+
+.pure-form .pure-input-1-3 {
+  width: 33%;
+}
+
+.pure-form .pure-input-1-4 {
+  width: 25%;
+}
+
+/* Inline help for forms */
+
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
+  display: inline-block;
+  padding-left: 0.3em;
+  color: #666;
+  vertical-align: middle;
+  font-size: 90%;
+}
+
+/* Block help for forms */
+
+.pure-form-message {
+  display: block;
+  color: #666;
+  font-size: 90%;
+}
+
+@media only screen and (max-width : 480px) {
+  .pure-form button[type="submit"] {
+    margin: 0.7em 0 0;
+  }
+
+  .pure-form input[type="text"],
+  .pure-form input[type="password"],
+  .pure-form input[type="email"],
+  .pure-form input[type="url"],
+  .pure-form input[type="date"],
+  .pure-form input[type="month"],
+  .pure-form input[type="time"],
+  .pure-form input[type="datetime"],
+  .pure-form input[type="datetime-local"],
+  .pure-form input[type="week"],
+  .pure-form input[type="number"],
+  .pure-form input[type="search"],
+  .pure-form input[type="tel"],
+  .pure-form input[type="color"],
+  .pure-form label {
+    margin-bottom: 0.3em;
+    display: block;
+  }
+
+  .pure-group input[type="text"],
+  .pure-group input[type="password"],
+  .pure-group input[type="email"],
+  .pure-group input[type="url"],
+  .pure-group input[type="date"],
+  .pure-group input[type="month"],
+  .pure-group input[type="time"],
+  .pure-group input[type="datetime"],
+  .pure-group input[type="datetime-local"],
+  .pure-group input[type="week"],
+  .pure-group input[type="number"],
+  .pure-group input[type="search"],
+  .pure-group input[type="tel"],
+  .pure-group input[type="color"] {
+    margin-bottom: 0;
+  }
+
+  .pure-form-aligned .pure-control-group label {
+    margin-bottom: 0.3em;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+
+  .pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 0;
+  }
+
+  /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+
+  .pure-form .pure-help-inline,
+  .pure-form-message-inline,
+  .pure-form-message {
+    display: block;
+    font-size: 80%;
+    /* Increased bottom padding to make it group with its related input element. */
+    padding: 0.2em 0 0.8em;
+  }
+}
+
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+
+.pure-g {
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
+  *letter-spacing: normal;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+  /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  /* IE10 uses display: flexbox */
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+
+.opera-only :-o-prefocus,
+.pure-g {
+  word-spacing: -0.43em;
+}
+
+.pure-u {
+  display: inline-block;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+
+.pure-g [class *= "pure-u"] {
+  font-family: sans-serif;
+}
+
+.pure-u-1,
+.pure-u-1-2,
+.pure-u-1-3,
+.pure-u-2-3,
+.pure-u-1-4,
+.pure-u-3-4,
+.pure-u-1-5,
+.pure-u-2-5,
+.pure-u-3-5,
+.pure-u-4-5,
+.pure-u-1-6,
+.pure-u-5-6,
+.pure-u-1-8,
+.pure-u-3-8,
+.pure-u-5-8,
+.pure-u-7-8,
+.pure-u-1-12,
+.pure-u-5-12,
+.pure-u-7-12,
+.pure-u-11-12,
+.pure-u-1-24,
+.pure-u-5-24,
+.pure-u-7-24,
+.pure-u-11-24,
+.pure-u-13-24,
+.pure-u-17-24,
+.pure-u-19-24,
+.pure-u-23-24 {
+  display: inline-block;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+.pure-u-1 {
+  width: 100%;
+}
+
+.pure-u-1-2 {
+  width: 50%;
+  *width: 49.969%;
+}
+
+.pure-u-1-3 {
+  width: 33.3333%;
+  *width: 33.3023%;
+}
+
+.pure-u-2-3 {
+  width: 66.6667%;
+  *width: 66.6357%;
+}
+
+.pure-u-1-4 {
+  width: 25%;
+  *width: 24.969%;
+}
+
+.pure-u-3-4 {
+  width: 75%;
+  *width: 74.969%;
+}
+
+.pure-u-1-5 {
+  width: 20%;
+  *width: 19.969%;
+}
+
+.pure-u-2-5 {
+  width: 40%;
+  *width: 39.969%;
+}
+
+.pure-u-3-5 {
+  width: 60%;
+  *width: 59.969%;
+}
+
+.pure-u-4-5 {
+  width: 80%;
+  *width: 79.969%;
+}
+
+.pure-u-1-6 {
+  width: 16.6667%;
+  *width: 16.6357%;
+}
+
+.pure-u-5-6 {
+  width: 83.3333%;
+  *width: 83.3023%;
+}
+
+.pure-u-1-8 {
+  width: 12.5%;
+  *width: 12.469%;
+}
+
+.pure-u-3-8 {
+  width: 37.5%;
+  *width: 37.469%;
+}
+
+.pure-u-5-8 {
+  width: 62.5%;
+  *width: 62.469%;
+}
+
+.pure-u-7-8 {
+  width: 87.5%;
+  *width: 87.469%;
+}
+
+.pure-u-1-12 {
+  width: 8.3333%;
+  *width: 8.3023%;
+}
+
+.pure-u-5-12 {
+  width: 41.6667%;
+  *width: 41.6357%;
+}
+
+.pure-u-7-12 {
+  width: 58.3333%;
+  *width: 58.3023%;
+}
+
+.pure-u-11-12 {
+  width: 91.6667%;
+  *width: 91.6357%;
+}
+
+.pure-u-1-24 {
+  width: 4.1667%;
+  *width: 4.1357%;
+}
+
+.pure-u-5-24 {
+  width: 20.8333%;
+  *width: 20.8023%;
+}
+
+.pure-u-7-24 {
+  width: 29.1667%;
+  *width: 29.1357%;
+}
+
+.pure-u-11-24 {
+  width: 45.8333%;
+  *width: 45.8023%;
+}
+
+.pure-u-13-24 {
+  width: 54.1667%;
+  *width: 54.1357%;
+}
+
+.pure-u-17-24 {
+  width: 70.8333%;
+  *width: 70.8023%;
+}
+
+.pure-u-19-24 {
+  width: 79.1667%;
+  *width: 79.1357%;
+}
+
+.pure-u-23-24 {
+  width: 95.8333%;
+  *width: 95.8023%;
+}
+
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+
+.pure-g-r {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  /* IE10 uses display: flexbox */
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+
+.opera-only :-o-prefocus,
+.pure-g-r {
+  word-spacing: -0.43em;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+
+.pure-g-r [class *= "pure-u"] {
+  font-family: sans-serif;
+}
+
+.pure-g-r img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 980px) {
+  .pure-visible-phone {
+    display: none;
+  }
+
+  .pure-visible-tablet {
+    display: none;
+  }
+
+  .pure-hidden-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pure-g-r > .pure-u,
+  .pure-g-r > [class *= "pure-u-"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pure-g-r > .pure-u,
+  .pure-g-r > [class *= "pure-u-"] {
+    width: 100%;
+  }
+
+  .pure-hidden-phone {
+    display: none;
+  }
+
+  .pure-visible-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .pure-hidden-tablet {
+    display: none;
+  }
+
+  .pure-visible-desktop {
+    display: none;
+  }
+}
+
+/*csslint adjoining-classes:false, outline-none:false*/
+
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+.pure-menu ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+.pure-menu.pure-menu-open {
+  visibility: visible;
+  z-index: 2;
+  width: 100%;
+}
+
+.pure-menu ul {
+  left: -10000px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: -10000px;
+  z-index: 1;
+}
+
+.pure-menu > ul {
+  position: relative;
+}
+
+.pure-menu-open > ul {
+  left: 0;
+  top: 0;
+  visibility: visible;
+}
+
+.pure-menu-open > ul:focus {
+  outline: 0;
+}
+
+.pure-menu li {
+  position: relative;
+}
+
+.pure-menu a,
+.pure-menu .pure-menu-heading {
+  display: block;
+  color: inherit;
+  line-height: 1.5em;
+  padding: 5px 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pure-menu.pure-menu-horizontal > .pure-menu-heading {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.pure-menu.pure-menu-horizontal > ul {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  height: 2.4em;
+}
+
+.pure-menu li a {
+  padding: 5px 20px;
+}
+
+.pure-menu-can-have-children > .pure-menu-label:after {
+  content: '\25B8';
+  float: right;
+  /* These specific fonts have the Unicode char we need. */
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
+  margin-right: -20px;
+  margin-top: -1px;
+}
+
+.pure-menu-can-have-children > .pure-menu-label {
+  padding-right: 30px;
+}
+
+.pure-menu-separator {
+  background-color: #dfdfdf;
+  display: block;
+  height: 1px;
+  font-size: 0;
+  margin: 7px 2px;
+  overflow: hidden;
+}
+
+.pure-menu-hidden {
+  display: none;
+}
+
+/* FIXED MENU */
+
+.pure-menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* HORIZONTAL MENU CODE */
+
+/* Initial menus should be inline-block so that they are horizontal */
+
+.pure-menu-horizontal li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+
+/* Submenus should still be display: block; */
+
+.pure-menu-horizontal li li {
+  display: block;
+}
+
+/* Content after should be down arrow */
+
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
+  content: "\25BE";
+}
+
+/*Add extra padding to elements that have the arrow so that the hover looks nice */
+
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
+  padding-right: 30px;
+}
+
+/* Adjusting separator for vertical menus */
+
+.pure-menu-horizontal li.pure-menu-separator {
+  height: 50%;
+  width: 1px;
+  margin: 0 7px;
+}
+
+/* Submenus should be horizontal separator again */
+
+.pure-menu-horizontal li li.pure-menu-separator {
+  height: 1px;
+  width: auto;
+  margin: 7px 2px;
+}
+
+/*csslint adjoining-classes:false*/
+
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+/* MAIN MENU STYLING */
+
+.pure-menu.pure-menu-open,
+.pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: #fff;
+  /* Old browsers */
+  border: 1px solid #b7b7b7;
+}
+
+/* remove borders for horizontal menus */
+
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
+  border: none;
+}
+
+/* LINK STYLES */
+
+.pure-menu a {
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+}
+
+.pure-menu a,
+.pure-menu .pure-menu-can-have-children > li:after {
+  color: #777;
+}
+
+.pure-menu .pure-menu-can-have-children > li:hover:after {
+  color: #fff;
+}
+
+/* Focus style for a dropdown menu-item when the parent has been opened */
+
+.pure-menu .pure-menu-open {
+  background: #dedede;
+}
+
+.pure-menu li a:hover,
+.pure-menu li a:focus {
+  background: #eee;
+}
+
+/* DISABLED STATES */
+
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
+  background: #fff;
+  color: #bfbfbf;
+}
+
+.pure-menu .pure-menu-disabled > a {
+  background-image: none;
+  border-color: transparent;
+  cursor: default;
+}
+
+.pure-menu .pure-menu-disabled > a,
+.pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
+  color: #bfbfbf;
+}
+
+/* HEADINGS */
+
+.pure-menu .pure-menu-heading {
+  color: #565d64;
+  text-transform: uppercase;
+  font-size: 90%;
+  margin-top: 0.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dfdfdf;
+}
+
+/* ACTIVE MENU ITEM */
+
+.pure-menu .pure-menu-selected a {
+  color: #000;
+}
+
+/* FIXED MENU */
+
+.pure-menu.pure-menu-open.pure-menu-fixed {
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+/*csslint box-model:false*/
+
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+.pure-paginator {
+  /* `pure-g` Grid styles */
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
+  *letter-spacing: normal;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+  /* `pure-paginator` Specific styles */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.opera-only :-o-prefocus,
+.pure-paginator {
+  word-spacing: -0.43em;
+}
+
+/* `pure-u` Grid styles */
+
+.pure-paginator li {
+  display: inline-block;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+.pure-paginator .pure-button {
+  border-radius: 0;
+  padding: 0.8em 1.4em;
+  vertical-align: top;
+  height: 1.1em;
+}
+
+.pure-paginator .pure-button:focus,
+.pure-paginator .pure-button:active {
+  outline-style: none;
+}
+
+.pure-paginator .prev,
+.pure-paginator .next {
+  color: #C0C1C3;
+  text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
+}
+
+.pure-paginator .prev {
+  border-radius: 2px 0 0 2px;
+}
+
+.pure-paginator .next {
+  border-radius: 0 2px 2px 0;
+}
+
+@media (max-width: 480px) {
+  .pure-menu-horizontal {
+    width: 100%;
+  }
+
+  .pure-menu-children li {
+    display: block;
+    border-bottom: 1px solid black;
+  }
+}
+
+.pure-table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.pure-table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+  border-left: 1px solid #cbcbcb;
+  /*  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 6px 12px;
+  /* cell padding */
+}
+
+.pure-table td:first-child,
+.pure-table th:first-child {
+  border-left-width: 0;
+}
+
+.pure-table thead {
+  background: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+
+.pure-table td {
+  background-color: transparent;
+}
+
+.pure-table-odd td {
+  background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+
+.pure-table-striped tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+
+.pure-table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.pure-table-bordered tbody > tr:last-child td,
+.pure-table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.pure-table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+
+/******************
+*
+* CSS
+*
+******************/
+
+/* Apply Colors */
+
+/* line 26, ../source/main.scss */
+
+.color-amber {
+  color: #ff9900;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amber {
+  background-color: #ff9900;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberDark {
+  color: #995c00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberDark {
+  background-color: #995c00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberDarker {
+  color: #4c2e00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberDarker {
+  background-color: #4c2e00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberLight {
+  color: #ffc266;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberLight {
+  background-color: #ffc266;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberLighter {
+  color: #ffd699;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberLighter {
+  background-color: #ffd699;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberDull {
+  color: #d68e22;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberDull {
+  background-color: #d68e22;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberDuller {
+  color: #b38642;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberDuller {
+  background-color: #b38642;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberBright {
+  color: #ffb84d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberBright {
+  background-color: #ffb84d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberBrighter {
+  color: #ffd391;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberBrighter {
+  background-color: #ffd391;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberQueen {
+  color: #f1995a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberQueen {
+  background-color: #f1995a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberFlame {
+  color: #f9b465;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberFlame {
+  background-color: #f9b465;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberSands {
+  color: #f7a955;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberSands {
+  background-color: #f7a955;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-amberBark {
+  color: #ffb448;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-amberBark {
+  background-color: #ffb448;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blue {
+  color: #0066ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blue {
+  background-color: #0066ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDark {
+  color: #003d99;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDark {
+  background-color: #003d99;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDarker {
+  color: #002966;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDarker {
+  background-color: #002966;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueLight {
+  color: #4d94ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueLight {
+  background-color: #4d94ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueLighter {
+  color: #80b2ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueLighter {
+  background-color: #80b2ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDull {
+  color: #0066cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDull {
+  background-color: #0066cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDuller {
+  color: #336699;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDuller {
+  background-color: #336699;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBright {
+  color: #3399ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBright {
+  background-color: #3399ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBrighter {
+  color: #70b8ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBrighter {
+  background-color: #70b8ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueAirforce {
+  color: #5d8aa8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueAirforce {
+  background-color: #5d8aa8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueAzure {
+  color: #007fff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueAzure {
+  background-color: #007fff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBaby {
+  color: #89cff0;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBaby {
+  background-color: #89cff0;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueFrench {
+  color: #318ce7;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueFrench {
+  background-color: #318ce7;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueCeleste {
+  color: #b2ffff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueCeleste {
+  background-color: #b2ffff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueColumbia {
+  color: #75b2dd;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueColumbia {
+  background-color: #75b2dd;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSky {
+  color: #73c2fb;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSky {
+  background-color: #73c2fb;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueMidnight {
+  color: midnightblue;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueMidnight {
+  background-color: midnightblue;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueNavy {
+  color: navy;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueNavy {
+  background-color: navy;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueRoyal {
+  color: royalblue;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueRoyal {
+  background-color: royalblue;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSapphire {
+  color: #0f52ba;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSapphire {
+  background-color: #0f52ba;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSteel {
+  color: steelblue;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSteel {
+  background-color: steelblue;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBehance {
+  color: #053eff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBehance {
+  background-color: #053eff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDropbox {
+  color: #3d9ae8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDropbox {
+  background-color: #3d9ae8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueFacebook {
+  color: #3b5998;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueFacebook {
+  background-color: #3b5998;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueFlickr {
+  color: #0063dc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueFlickr {
+  background-color: #0063dc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueFoursquare {
+  color: #25a0ca;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueFoursquare {
+  background-color: #25a0ca;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueLinkedIn {
+  color: #0e76a8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueLinkedIn {
+  background-color: #0e76a8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueRdio {
+  color: #008fd5;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueRdio {
+  background-color: #008fd5;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSkype {
+  color: #00aff0;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSkype {
+  background-color: #00aff0;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueTwitter {
+  color: #00a0d1;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueTwitter {
+  background-color: #00a0d1;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueVimeo {
+  color: #86c9ef;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueVimeo {
+  background-color: #86c9ef;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueVirb {
+  color: #06afd8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueVirb {
+  background-color: #06afd8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSea {
+  color: #668ebf;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSea {
+  background-color: #668ebf;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBabe {
+  color: #96b5d4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBabe {
+  background-color: #96b5d4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueReflection {
+  color: #9ab7b3;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueReflection {
+  background-color: #9ab7b3;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueHoliday {
+  color: #0097c8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueHoliday {
+  background-color: #0097c8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueStonewash {
+  color: #648e9c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueStonewash {
+  background-color: #648e9c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueCyan {
+  color: #36a0ca;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueCyan {
+  background-color: #36a0ca;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSapphire {
+  color: #2c405b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSapphire {
+  background-color: #2c405b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueLake {
+  color: #476a88;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueLake {
+  background-color: #476a88;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBreton {
+  color: #4d5965;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBreton {
+  background-color: #4d5965;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueSeduction {
+  color: #4c84b8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueSeduction {
+  background-color: #4c84b8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueCloud {
+  color: #6883b6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueCloud {
+  background-color: #6883b6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueZurb {
+  color: #2ba6cb;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueZurb {
+  background-color: #2ba6cb;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black {
+  color: black;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black {
+  background-color: black;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayDarker {
+  color: #222222;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayDarker {
+  background-color: #222222;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayDark {
+  color: #333333;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayDark {
+  background-color: #333333;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-gray {
+  color: #555555;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-gray {
+  background-color: #555555;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayLight {
+  color: #999999;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayLight {
+  background-color: #999999;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayLighter {
+  color: #eeeeee;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayLighter {
+  background-color: #eeeeee;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-white {
+  color: white;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-white {
+  background-color: white;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueBoot {
+  color: #049cdb;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueBoot {
+  background-color: #049cdb;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueDarkBoot {
+  color: #0064cd;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueDarkBoot {
+  background-color: #0064cd;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenBoot {
+  color: #46a546;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenBoot {
+  background-color: #46a546;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBoot {
+  color: #9d261d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBoot {
+  background-color: #9d261d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowBoot {
+  color: #ffc40d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowBoot {
+  background-color: #ffc40d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeBoot {
+  color: #f89406;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeBoot {
+  background-color: #f89406;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBoot {
+  color: #c3325f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBoot {
+  background-color: #c3325f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleBoot {
+  color: #7a43b6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleBoot {
+  background-color: #7a43b6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-linkColor {
+  color: #0088cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-linkColor {
+  background-color: #0088cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tableBackgroundAccent {
+  color: #f9f9f9;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tableBackgroundAccent {
+  background-color: #f9f9f9;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tableBackgroundHover {
+  color: whitesmoke;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tableBackgroundHover {
+  background-color: whitesmoke;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnInfoBackground {
+  color: #5bc0de;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnInfoBackground {
+  background-color: #5bc0de;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnInfoBackgroundHighlight {
+  color: #2f96b4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnInfoBackgroundHighlight {
+  background-color: #2f96b4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnSuccessBackground {
+  color: #62c462;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnSuccessBackground {
+  background-color: #62c462;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnSuccessBackgroundHighlight {
+  color: #51a351;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnSuccessBackgroundHighlight {
+  background-color: #51a351;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnDangerBackground {
+  color: #ee5f5b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnDangerBackground {
+  background-color: #ee5f5b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnDangerBackgroundHighlight {
+  color: #bd362f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnDangerBackgroundHighlight {
+  background-color: #bd362f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-btnInverseBackground {
+  color: #444444;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-btnInverseBackground {
+  background-color: #444444;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-inputBorder {
+  color: #cccccc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-inputBorder {
+  background-color: #cccccc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-dropdownDividerTop {
+  color: #e5e5e5;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-dropdownDividerTop {
+  background-color: #e5e5e5;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-navbarText {
+  color: #777777;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-navbarText {
+  background-color: #777777;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-navbarInverseBackground {
+  color: #111111;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-navbarInverseBackground {
+  background-color: #111111;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-navbarInverseBackgroundHighlight {
+  color: #222222;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-navbarInverseBackgroundHighlight {
+  background-color: #222222;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-navbarInverseBorder {
+  color: #252525;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-navbarInverseBorder {
+  background-color: #252525;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-paginationBorder {
+  color: #dddddd;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-paginationBorder {
+  background-color: #dddddd;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-warningText {
+  color: #c09853;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-warningText {
+  background-color: #c09853;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-warningBackground {
+  color: #fcf8e3;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-warningBackground {
+  background-color: #fcf8e3;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-errorText {
+  color: #b94a48;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-errorText {
+  background-color: #b94a48;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-errorBackground {
+  color: #f2dede;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-errorBackground {
+  background-color: #f2dede;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-successText {
+  color: #468847;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-successText {
+  background-color: #468847;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-successBackground {
+  color: #dff0d8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-successBackground {
+  background-color: #dff0d8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-infoText {
+  color: #3a87ad;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-infoText {
+  background-color: #3a87ad;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-infoBackground {
+  color: #d9edf7;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-infoBackground {
+  background-color: #d9edf7;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brown {
+  color: #663300;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brown {
+  background-color: #663300;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownDark {
+  color: #472400;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownDark {
+  background-color: #472400;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownDarker {
+  color: #331a00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownDarker {
+  background-color: #331a00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownLight {
+  color: #754719;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownLight {
+  background-color: #754719;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownLighter {
+  color: #855c33;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownLighter {
+  background-color: #855c33;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownDull {
+  color: #664728;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownDull {
+  background-color: #664728;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownDuller {
+  color: #5e4c3a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownDuller {
+  background-color: #5e4c3a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBright {
+  color: #993300;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBright {
+  background-color: #993300;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBrighter {
+  color: #a34719;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBrighter {
+  background-color: #a34719;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBeaver {
+  color: #9f8170;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBeaver {
+  background-color: #9f8170;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBistre {
+  color: #3d2b1f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBistre {
+  background-color: #3d2b1f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBole {
+  color: #79443b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBole {
+  background-color: #79443b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBronze {
+  color: #cd7f32;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBronze {
+  background-color: #cd7f32;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBurnt {
+  color: #8a3324;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBurnt {
+  background-color: #8a3324;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownCamel {
+  color: #c19a6b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownCamel {
+  background-color: #c19a6b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownChestnut {
+  color: #954535;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownChestnut {
+  background-color: #954535;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownChocolate {
+  color: #7b3f00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownChocolate {
+  background-color: #7b3f00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownCoffee {
+  color: #6f4e37;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownCoffee {
+  background-color: #6f4e37;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownCopper {
+  color: #b87333;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownCopper {
+  background-color: #b87333;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownMahogany {
+  color: #c04000;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownMahogany {
+  background-color: #c04000;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownSepia {
+  color: #704214;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownSepia {
+  background-color: #704214;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownCaramel {
+  color: #ac9d8e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownCaramel {
+  background-color: #ac9d8e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownPraline {
+  color: #9f8e82;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownPraline {
+  background-color: #9f8e82;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownTruffle {
+  color: #8e796b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownTruffle {
+  background-color: #8e796b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownExotic {
+  color: #8e766c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownExotic {
+  background-color: #8e766c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownBitter {
+  color: #82695f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownBitter {
+  background-color: #82695f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownCocoa {
+  color: #7e6660;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownCocoa {
+  background-color: #7e6660;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownMocha {
+  color: #7f6968;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownMocha {
+  background-color: #7f6968;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-brownClay {
+  color: #d7c3b8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-brownClay {
+  background-color: #d7c3b8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayAsh {
+  color: #b2beb5;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayAsh {
+  background-color: #b2beb5;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayBattleship {
+  color: #848482;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayBattleship {
+  background-color: #848482;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayCadet {
+  color: #91a3b0;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayCadet {
+  background-color: #91a3b0;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayCharcoal {
+  color: #36454f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayCharcoal {
+  background-color: #36454f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayCool {
+  color: #8c92ac;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayCool {
+  background-color: #8c92ac;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayGunmetal {
+  color: #423732;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayGunmetal {
+  background-color: #423732;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-graySilver {
+  color: silver;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-graySilver {
+  background-color: silver;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-graySlate {
+  color: slategrey;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-graySlate {
+  background-color: slategrey;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayTaupe {
+  color: #8b8589;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayTaupe {
+  background-color: #8b8589;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-grayTimberwolf {
+  color: #dbd7d2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-grayTimberwolf {
+  background-color: #dbd7d2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-green {
+  color: #33cc33;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-green {
+  background-color: #33cc33;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenDark {
+  color: #1f7a1f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenDark {
+  background-color: #1f7a1f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenDarker {
+  color: #0f3d0f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenDarker {
+  background-color: #0f3d0f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenLight {
+  color: #5cd65c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenLight {
+  background-color: #5cd65c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenLighter {
+  color: #85e085;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenLighter {
+  background-color: #85e085;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenDull {
+  color: #009933;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenDull {
+  background-color: #009933;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenDuller {
+  color: #428057;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenDuller {
+  background-color: #428057;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenBright {
+  color: #66ff33;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenBright {
+  background-color: #66ff33;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenBrighter {
+  color: #99ff66;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenBrighter {
+  background-color: #99ff66;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenApple {
+  color: #8db600;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenApple {
+  background-color: #8db600;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenAsparagus {
+  color: #7ba05b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenAsparagus {
+  background-color: #7ba05b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenOlive {
+  color: darkolivegreen;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenOlive {
+  background-color: darkolivegreen;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenFern {
+  color: #4f7942;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenFern {
+  background-color: #4f7942;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenForest {
+  color: forestgreen;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenForest {
+  background-color: forestgreen;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenHunter {
+  color: #355e3b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenHunter {
+  background-color: #355e3b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenMint {
+  color: #3eb489;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenMint {
+  background-color: #3eb489;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenOffice {
+  color: green;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenOffice {
+  background-color: green;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenSea {
+  color: seagreen;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenSea {
+  background-color: seagreen;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenSpring {
+  color: #a7fc00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenSpring {
+  background-color: #a7fc00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenTeal {
+  color: teal;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenTeal {
+  background-color: teal;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenEvernote {
+  color: #5ba525;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenEvernote {
+  background-color: #5ba525;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenForrst {
+  color: #5b9a68;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenForrst {
+  background-color: #5b9a68;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenGroupon {
+  color: #82b548;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenGroupon {
+  background-color: #82b548;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenKickstarter {
+  color: #87c442;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenKickstarter {
+  background-color: #87c442;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenNvidia {
+  color: #76b900;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenNvidia {
+  background-color: #76b900;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenSpotify {
+  color: #81b71a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenSpotify {
+  background-color: #81b71a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenZerply {
+  color: #9dcc7a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenZerply {
+  background-color: #9dcc7a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenSpa {
+  color: #00aa8f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenSpa {
+  background-color: #00aa8f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenFalls {
+  color: #33ad7b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenFalls {
+  background-color: #33ad7b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenGranada {
+  color: #57b176;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenGranada {
+  background-color: #57b176;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenGarland {
+  color: #68af6b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenGarland {
+  background-color: #68af6b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenParrot {
+  color: #75b65d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenParrot {
+  background-color: #75b65d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenCreek {
+  color: #89b555;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenCreek {
+  background-color: #89b555;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenKiwi {
+  color: #98b641;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenKiwi {
+  background-color: #98b641;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenLime {
+  color: #b6bf3c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenLime {
+  background-color: #b6bf3c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenZurb {
+  color: #5da423;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenZurb {
+  background-color: #5da423;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-lime {
+  color: #b8e62e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-lime {
+  background-color: #b8e62e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeDark {
+  color: #7a991f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeDark {
+  background-color: #7a991f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeDarker {
+  color: #3d4c0f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeDarker {
+  background-color: #3d4c0f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeLight {
+  color: #d6ff5c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeLight {
+  background-color: #d6ff5c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeLighter {
+  color: #e0ff85;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeLighter {
+  background-color: #e0ff85;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeDull {
+  color: #a6c44b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeDull {
+  background-color: #a6c44b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeDuller {
+  color: #94a856;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeDuller {
+  background-color: #94a856;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeBright {
+  color: #bfff00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeBright {
+  background-color: #bfff00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-limeBrighter {
+  color: #d7ff5e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-limeBrighter {
+  background-color: #d7ff5e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orange {
+  color: #ff6600;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orange {
+  background-color: #ff6600;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeDark {
+  color: #993d00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeDark {
+  background-color: #993d00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeDarker {
+  color: #4c1f00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeDarker {
+  background-color: #4c1f00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeLight {
+  color: #ff944d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeLight {
+  background-color: #ff944d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeLighter {
+  color: #ffc299;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeLighter {
+  background-color: #ffc299;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeDull {
+  color: #c96b2c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeDull {
+  background-color: #c96b2c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeDuller {
+  color: #a16740;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeDuller {
+  background-color: #a16740;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeBright {
+  color: #ff9933;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeBright {
+  background-color: #ff9933;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeAmazon {
+  color: #e47911;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeAmazon {
+  background-color: #e47911;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeBlogger {
+  color: #fc4f08;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeBlogger {
+  background-color: #fc4f08;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeGrooveshark {
+  color: #f77f00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeGrooveshark {
+  background-color: #f77f00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeHackerNews {
+  color: #ff6600;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeHackerNews {
+  background-color: #ff6600;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeSoundCloud {
+  color: #ff7700;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeSoundCloud {
+  background-color: #ff7700;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeUbuntu {
+  color: #dd4814;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeUbuntu {
+  background-color: #dd4814;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeAddvocate {
+  color: #ff6138;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeAddvocate {
+  background-color: #ff6138;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeGinger {
+  color: #995039;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeGinger {
+  background-color: #995039;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeAutumn {
+  color: #be5f37;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeAutumn {
+  background-color: #be5f37;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeDawn {
+  color: #e47c6c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeDawn {
+  background-color: #e47c6c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeBongo {
+  color: #e66e5b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeBongo {
+  background-color: #e66e5b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeMango {
+  color: #e98762;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeMango {
+  background-color: #e98762;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeCoral {
+  color: #ec926f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeCoral {
+  background-color: #ec926f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangePaprika {
+  color: #cf5141;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangePaprika {
+  background-color: #cf5141;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeAfrican {
+  color: #db6335;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeAfrican {
+  background-color: #db6335;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeFlame {
+  color: #d46946;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeFlame {
+  background-color: #d46946;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeAuburn {
+  color: #dd8251;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeAuburn {
+  background-color: #dd8251;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeHarvest {
+  color: #ee8c4d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeHarvest {
+  background-color: #ee8c4d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-orangeSands {
+  color: #eb8830;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-orangeSands {
+  background-color: #eb8830;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peach {
+  color: #ff5050;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peach {
+  background-color: #ff5050;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachDark {
+  color: #993030;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachDark {
+  background-color: #993030;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachDarker {
+  color: #4c1818;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachDarker {
+  background-color: #4c1818;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachLight {
+  color: #ff9696;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachLight {
+  background-color: #ff9696;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachLighter {
+  color: #ffcaca;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachLighter {
+  background-color: #ffcaca;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachDull {
+  color: #d67272;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachDull {
+  background-color: #d67272;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachDuller {
+  color: #ba8c8c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachDuller {
+  background-color: #ba8c8c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachBright {
+  color: #ff9c9c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachBright {
+  background-color: #ff9c9c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachBrighter {
+  color: #ffbfbf;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachBrighter {
+  background-color: #ffbfbf;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachSorbet {
+  color: #f5d8d2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachSorbet {
+  background-color: #f5d8d2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-peachShimmer {
+  color: #fdefe2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-peachShimmer {
+  background-color: #fdefe2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pink {
+  color: #ff33cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pink {
+  background-color: #ff33cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDark {
+  color: #b2248f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDark {
+  background-color: #b2248f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDarker {
+  color: #661452;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDarker {
+  background-color: #661452;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkLight {
+  color: #ff5cd6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkLight {
+  background-color: #ff5cd6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkLighter {
+  color: #ff85e0;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkLighter {
+  background-color: #ff85e0;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDull {
+  color: #cc3399;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDull {
+  background-color: #cc3399;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDuller {
+  color: #993366;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDuller {
+  background-color: #993366;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBright {
+  color: #ff66cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBright {
+  background-color: #ff66cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBrighter {
+  color: #ff99cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBrighter {
+  background-color: #ff99cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkAmaranth {
+  color: #e52b50;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkAmaranth {
+  background-color: #e52b50;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBrink {
+  color: #fb607f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBrink {
+  background-color: #fb607f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkCarmine {
+  color: #960018;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkCarmine {
+  background-color: #960018;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkCarnation {
+  color: #ffa6c9;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkCarnation {
+  background-color: #ffa6c9;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkCerise {
+  color: #de3163;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkCerise {
+  background-color: #de3163;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkCoral {
+  color: #f88379;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkCoral {
+  background-color: #f88379;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDeep {
+  color: deeppink;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDeep {
+  background-color: deeppink;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkFandago {
+  color: #b53389;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkFandago {
+  background-color: #b53389;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkRose {
+  color: #f64a8a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkRose {
+  background-color: #f64a8a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkFuchsia {
+  color: magenta;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkFuchsia {
+  background-color: magenta;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkHot {
+  color: hotpink;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkHot {
+  background-color: hotpink;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkMagenta {
+  color: #ff0090;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkMagenta {
+  background-color: #ff0090;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkRuby {
+  color: #e0115f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkRuby {
+  background-color: #e0115f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkSalmon {
+  color: #ff91a4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkSalmon {
+  background-color: #ff91a4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkDribbble {
+  color: #ea4c89;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkDribbble {
+  background-color: #ea4c89;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkFlickr {
+  color: #ff0084;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkFlickr {
+  background-color: #ff0084;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBerry {
+  color: #d46f8d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBerry {
+  background-color: #d46f8d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkPlum {
+  color: #952c57;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkPlum {
+  background-color: #952c57;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkBlush {
+  color: #954d65;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkBlush {
+  background-color: #954d65;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkAdobe {
+  color: #9f5c60;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkAdobe {
+  background-color: #9f5c60;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkNevada {
+  color: #ac545c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkNevada {
+  background-color: #ac545c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkFlamingo {
+  color: #c16b9e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkFlamingo {
+  background-color: #c16b9e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkCandy {
+  color: #bb597e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkCandy {
+  background-color: #bb597e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkFuchsia {
+  color: #c25c77;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkFuchsia {
+  background-color: #c25c77;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkRose {
+  color: #cf5f6f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkRose {
+  background-color: #cf5f6f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-pinkParty {
+  color: #d87082;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-pinkParty {
+  background-color: #d87082;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black10 {
+  color: #e6e6e6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black10 {
+  background-color: #e6e6e6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black20 {
+  color: #cccccc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black20 {
+  background-color: #cccccc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black30 {
+  color: #b3b3b3;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black30 {
+  background-color: #b3b3b3;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black40 {
+  color: #999999;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black40 {
+  background-color: #999999;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black50 {
+  color: gray;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black50 {
+  background-color: gray;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black60 {
+  color: #666666;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black60 {
+  background-color: #666666;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black70 {
+  color: #4d4d4d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black70 {
+  background-color: #4d4d4d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black80 {
+  color: #333333;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black80 {
+  background-color: #333333;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-black90 {
+  color: #191919;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-black90 {
+  background-color: #191919;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-bluePrimary {
+  color: #428bca;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-bluePrimary {
+  background-color: #428bca;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-greenSuccess {
+  color: #5cb85c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-greenSuccess {
+  background-color: #5cb85c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowWarning {
+  color: #f0ad4e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowWarning {
+  background-color: #f0ad4e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDanger {
+  color: #d9534f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDanger {
+  background-color: #d9534f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-blueInfo {
+  color: #5bc0de;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-blueInfo {
+  background-color: #5bc0de;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purple {
+  color: #9966ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purple {
+  background-color: #9966ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleDark {
+  color: #5c3d99;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleDark {
+  background-color: #5c3d99;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleDarker {
+  color: #2e1f4c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleDarker {
+  background-color: #2e1f4c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleLight {
+  color: #ad85ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleLight {
+  background-color: #ad85ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleLighter {
+  color: #c2a3ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleLighter {
+  background-color: #c2a3ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleDull {
+  color: #957bc7;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleDull {
+  background-color: #957bc7;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleDuller {
+  color: #9589ad;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleDuller {
+  background-color: #9589ad;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleBright {
+  color: #9933ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleBright {
+  background-color: #9933ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleBrighter {
+  color: #ad5cff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleBrighter {
+  background-color: #ad5cff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleAmethyst {
+  color: #9966cc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleAmethyst {
+  background-color: #9966cc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleCerise {
+  color: #de3163;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleCerise {
+  background-color: #de3163;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleFandango {
+  color: #b53389;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleFandango {
+  background-color: #b53389;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleHeliotrope {
+  color: #df73ff;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleHeliotrope {
+  background-color: #df73ff;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleLavendar {
+  color: #b57edc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleLavendar {
+  background-color: #b57edc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleMagenta {
+  color: #ff0090;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleMagenta {
+  background-color: #ff0090;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleOrchid {
+  color: orchid;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleOrchid {
+  background-color: orchid;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purplePlum {
+  color: #8e4585;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purplePlum {
+  background-color: #8e4585;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleHeroku {
+  color: #6567a5;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleHeroku {
+  background-color: #6567a5;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleYahoo {
+  color: #720e9e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleYahoo {
+  background-color: #720e9e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleRose {
+  color: #865873;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleRose {
+  background-color: #865873;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleBlush {
+  color: #864e66;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleBlush {
+  background-color: #864e66;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleOpera {
+  color: #b977a9;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleOpera {
+  background-color: #b977a9;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleVerona {
+  color: #a77aac;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleVerona {
+  background-color: #a77aac;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleSpring {
+  color: #a389b8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleSpring {
+  background-color: #a389b8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleBlossom {
+  color: #8a7aa2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleBlossom {
+  background-color: #8a7aa2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleShowers {
+  color: #7571a4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleShowers {
+  background-color: #7571a4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-purpleLilac {
+  color: #797fa8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-purpleLilac {
+  background-color: #797fa8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-red {
+  color: #d42c2c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-red {
+  background-color: #d42c2c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDark {
+  color: #7a0000;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDark {
+  background-color: #7a0000;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDarker {
+  color: #3d0000;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDarker {
+  background-color: #3d0000;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redLight {
+  color: #db4d4d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redLight {
+  background-color: #db4d4d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redLighter {
+  color: #f0b2b2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redLighter {
+  background-color: #f0b2b2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDull {
+  color: #993333;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDull {
+  background-color: #993333;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDuller {
+  color: #824d4d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDuller {
+  background-color: #824d4d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBright {
+  color: red;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBright {
+  background-color: red;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBrighter {
+  color: #ff6e6e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBrighter {
+  background-color: #ff6e6e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redAuburn {
+  color: brown;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redAuburn {
+  background-color: brown;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBurgundy {
+  color: #9f1d35;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBurgundy {
+  background-color: #9f1d35;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redChestnut {
+  color: #9a1a00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redChestnut {
+  background-color: #9a1a00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redCrimson {
+  color: crimson;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redCrimson {
+  background-color: crimson;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBrick {
+  color: firebrick;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBrick {
+  background-color: firebrick;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redWood {
+  color: #ab4e52;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redWood {
+  background-color: #ab4e52;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redRust {
+  color: #b7410e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redRust {
+  background-color: #b7410e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redWine {
+  color: #722f37;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redWine {
+  background-color: #722f37;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redGoogle {
+  color: #db4a39;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redGoogle {
+  background-color: #db4a39;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redLastfm {
+  color: #c3000d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redLastfm {
+  background-color: #c3000d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redPinterest {
+  color: #c8232c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redPinterest {
+  background-color: #c8232c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redYouTube {
+  color: #c4302b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redYouTube {
+  background-color: #c4302b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redRaspberry {
+  color: #bf545a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redRaspberry {
+  background-color: #bf545a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redDiva {
+  color: #b5787d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redDiva {
+  background-color: #b5787d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redRuby {
+  color: #7d3d3e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redRuby {
+  background-color: #7d3d3e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redSummer {
+  color: #a05a5c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redSummer {
+  background-color: #a05a5c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redFire {
+  color: #b24848;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redFire {
+  background-color: #b24848;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redFountain {
+  color: #a64048;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redFountain {
+  background-color: #a64048;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redAutumn {
+  color: #a34847;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redAutumn {
+  background-color: #a34847;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redBloom {
+  color: #9d5351;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redBloom {
+  background-color: #9d5351;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redThai {
+  color: #aa5452;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redThai {
+  background-color: #aa5452;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redVolcanic {
+  color: #b5473a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redVolcanic {
+  background-color: #b5473a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-redZurb {
+  color: #c60f13;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-redZurb {
+  background-color: #c60f13;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tan {
+  color: #ffcc99;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tan {
+  background-color: #ffcc99;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanDark {
+  color: #997a5c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanDark {
+  background-color: #997a5c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanDarker {
+  color: #4c3d2e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanDarker {
+  background-color: #4c3d2e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanLight {
+  color: #ffd6ad;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanLight {
+  background-color: #ffd6ad;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanLighter {
+  color: #ffe0c2;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanLighter {
+  background-color: #ffe0c2;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanDull {
+  color: #c7925d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanDull {
+  background-color: #c7925d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanDuller {
+  color: #a67544;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanDuller {
+  background-color: #a67544;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanBright {
+  color: #ff9966;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanBright {
+  background-color: #ff9966;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanBrighter {
+  color: #ffc2a3;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanBrighter {
+  background-color: #ffc2a3;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanGold {
+  color: #f5ca9e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanGold {
+  background-color: #f5ca9e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanBronze {
+  color: #edbc91;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanBronze {
+  background-color: #edbc91;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanWholemeal {
+  color: #e8b894;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanWholemeal {
+  background-color: #e8b894;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanNectar {
+  color: #eab897;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanNectar {
+  background-color: #eab897;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanMelody {
+  color: #e3bba5;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanMelody {
+  background-color: #e3bba5;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanSpicy {
+  color: #eaa06f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanSpicy {
+  background-color: #eaa06f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanPumpkin {
+  color: #e09c70;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanPumpkin {
+  background-color: #e09c70;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-tanGinger {
+  color: #e89f78;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-tanGinger {
+  background-color: #e89f78;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoise {
+  color: #48e8c8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoise {
+  background-color: #48e8c8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseDark {
+  color: #00997a;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseDark {
+  background-color: #00997a;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseDarker {
+  color: #006652;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseDarker {
+  background-color: #006652;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseLight {
+  color: #6be8cf;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseLight {
+  background-color: #6be8cf;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseLighter {
+  color: #8ee8d6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseLighter {
+  background-color: #8ee8d6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseDull {
+  color: #52ccb4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseDull {
+  background-color: #52ccb4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseDuller {
+  color: #69b8a8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseDuller {
+  background-color: #69b8a8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseBright {
+  color: #00ffcc;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseBright {
+  background-color: #00ffcc;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseBrighter {
+  color: #80ffe6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseBrighter {
+  background-color: #80ffe6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseTeal {
+  color: #01969c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseTeal {
+  background-color: #01969c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseDawn {
+  color: #35afba;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseDawn {
+  background-color: #35afba;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-turquoiseCrystal {
+  color: #2ba8a8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-turquoiseCrystal {
+  background-color: #2ba8a8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteAntiflash {
+  color: #f2f3f4;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteAntiflash {
+  background-color: #f2f3f4;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteAntique {
+  color: antiquewhite;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteAntique {
+  background-color: antiquewhite;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteBeige {
+  color: beige;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteBeige {
+  background-color: beige;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteBlond {
+  color: #faf0be;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteBlond {
+  background-color: #faf0be;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteCornsilk {
+  color: cornsilk;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteCornsilk {
+  background-color: cornsilk;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteCosmic {
+  color: #fff8e7;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteCosmic {
+  background-color: #fff8e7;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteCream {
+  color: #fffdd0;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteCream {
+  background-color: #fffdd0;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteEggshell {
+  color: #f0ead6;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteEggshell {
+  background-color: #f0ead6;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteFloral {
+  color: floralwhite;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteFloral {
+  background-color: floralwhite;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteHoneydew {
+  color: honeydew;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteHoneydew {
+  background-color: honeydew;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteIsabelline {
+  color: #f4f0ec;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteIsabelline {
+  background-color: #f4f0ec;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteNavajo {
+  color: navajowhite;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteNavajo {
+  background-color: navajowhite;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whitePearl {
+  color: #eae0c8;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whitePearl {
+  background-color: #eae0c8;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteVanilla {
+  color: #f3e5ab;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteVanilla {
+  background-color: #f3e5ab;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteSmoke {
+  color: whitesmoke;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteSmoke {
+  background-color: whitesmoke;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-whiteBlossom {
+  color: #f6e9de;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-whiteBlossom {
+  background-color: #f6e9de;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellow {
+  color: #ffcc00;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellow {
+  background-color: #ffcc00;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowDark {
+  color: #806600;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowDark {
+  background-color: #806600;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowDarker {
+  color: #332900;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowDarker {
+  background-color: #332900;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowLight {
+  color: #ffdb4d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowLight {
+  background-color: #ffdb4d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowLighter {
+  color: #ffeb99;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowLighter {
+  background-color: #ffeb99;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowDull {
+  color: #cfb036;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowDull {
+  background-color: #cfb036;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowDuller {
+  color: #b39f52;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowDuller {
+  background-color: #b39f52;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowBright {
+  color: yellow;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowBright {
+  background-color: yellow;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowBrighter {
+  color: #ffff66;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowBrighter {
+  background-color: #ffff66;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowBuff {
+  color: #f0dc82;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowBuff {
+  background-color: #f0dc82;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowGold {
+  color: gold;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowGold {
+  background-color: gold;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowGoldmetal {
+  color: #d4af37;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowGoldmetal {
+  background-color: #d4af37;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowJasmine {
+  color: #f8de7e;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowJasmine {
+  background-color: #f8de7e;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowMaize {
+  color: #fbec5d;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowMaize {
+  background-color: #fbec5d;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowSaffron {
+  color: #f4c430;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowSaffron {
+  background-color: #f4c430;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowSunglow {
+  color: #ffcc33;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowSunglow {
+  background-color: #ffcc33;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowLight {
+  color: #fdfc8f;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowLight {
+  background-color: #fdfc8f;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowAboutme {
+  color: #ffcc33;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowAboutme {
+  background-color: #ffcc33;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowAim {
+  color: #fcd20b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowAim {
+  background-color: #fcd20b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowPharaoh {
+  color: #fdc46b;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowPharaoh {
+  background-color: #fdc46b;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowHavana {
+  color: #fbbb5c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowHavana {
+  background-color: #fbbb5c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowSunny {
+  color: #ffd251;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowSunny {
+  background-color: #ffd251;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowDelhi {
+  color: #ffc924;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowDelhi {
+  background-color: #ffc924;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowSpring {
+  color: #ffcd59;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowSpring {
+  background-color: #ffcd59;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowSunflower {
+  color: #ffc43c;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowSunflower {
+  background-color: #ffc43c;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowGlaze {
+  color: #ffc054;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowGlaze {
+  background-color: #ffc054;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowBreeze {
+  color: #f0d458;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowBreeze {
+  background-color: #f0d458;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowEaster {
+  color: #fecf51;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowEaster {
+  background-color: #fecf51;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowLemon {
+  color: #ffd865;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowLemon {
+  background-color: #ffd865;
+}
+
+/* line 26, ../source/main.scss */
+
+.color-yellowButtercup {
+  color: #f9c833;
+}
+
+/* line 30, ../source/main.scss */
+
+.background-yellowButtercup {
+  background-color: #f9c833;
+}
+
+/* line 35, ../source/main.scss */
+
+body {
+  background: #36454f;
+  color: #0d1113;
+  text-shadow: 0px 1px 1px #516776;
+}
+
+/* line 42, ../source/main.scss */
+
+header .name,
+header .desc {
+  text-align: center;
+}
+
+/* line 47, ../source/main.scss */
+
+.pointer {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 54, ../source/main.scss */
+
+.layers div {
+  text-align: center;
+}
+
+/* line 66, ../source/main.scss */
+
+.block {
+  position: relative;
+  color: #FFF;
+  text-shadow: 0px 0px 2px #4c4c4c;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 1px whitesmoke;
+  height: 2.2rem;
+}
+
+/* line 76, ../source/main.scss */
+
+.block-hover {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 84, ../source/main.scss */
+
+.block:hover .block-hover {
+  opacity: 0.25;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+}
+
+/* line 90, ../source/main.scss */
+
+.block-name {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+/* line 97, ../source/main.scss */
+
+.block-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
